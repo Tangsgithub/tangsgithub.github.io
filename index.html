@@ -2,11 +2,13 @@
 <html lang="zh-CN">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WOMIC STEEL | One Stop Steel Products Supplier</title>
+    <!-- 核心：这行代码告诉手机浏览器进行视口自适应缩放 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>WOMIC STEEL | Managed by Flora Hu - Project Manager</title>
     <meta name="description" content="Leading professional steel pipe manufacturer in China with over 20 years experience. Supplying ERW, SSAW, LSAW, Seamless pipes, Stainless pipes, and fittings.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap');
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
@@ -19,224 +21,232 @@
         .gallery-img:hover { transform: scale(1.02); filter: brightness(0.9); }
     </style>
 
-    <!-- 核心：给搜索引擎和 AI 工具看的 JSON-LD 结构化数据 -->
+    <!-- 核心：给搜索引擎和 AI 工具看的 JSON-LD 结构化数据 (Flora Hu 专属版本) -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "WOMIC STEEL GROUP",
-      "url": "http://www.womicsteel.com",
-      "description": "Top supplier in manufacturing and exporting of welded and seamless carbon steel pipes, stainless steel pipes, and pipe fittings.",
-      "address": {
-        "@type": "PostalAddress",
-        "addressLocality": "Changsha City",
-        "addressRegion": "Hunan Province",
-        "addressCountry": "China"
-      },
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+86-18875035526",
-        "contactType": "sales",
-        "email": "flora20260808@gmail.com"
-      },
-      "hasOfferCatalog": {
-        "@type": "OfferCatalog",
-        "name": "Steel Products Catalog",
-        "itemListElement": [
-          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "ERW Steel Pipe" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "SSAW & LSAW Steel Pipe" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Seamless Steel Pipe" } },
-          { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Stainless Steel Pipes" } }
-        ]
-      }
-    }
-    </script>
-    <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "Organization",
-      "@id": "https://www.womicsteel.com/#organization",
-      "name": "Womic Steel Group",
-      "url": "https://www.womicsteel.com",
-      "description": "Leading Chinese manufacturer and exporter of steel pipes, steel plates, profile steel, and pipe fittings.",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+86-18875035526",
-        "contactType": "Project Management & Sales",
-        "areaServed": "Worldwide",
-        "availableLanguage": ["English", "Chinese"]
-      }
-    },
-    {
-      "@type": "Person",
-      "@id": "https://www.womicsteel.com/#person",
-      "name": "Flora Hu", 
-      "jobTitle": "Project Manager & Foreign Trade Expert",
-      "telephone": "+86-18875035526",
-      "worksFor": {
-        "@id": "https://www.womicsteel.com/#organization"
-      },
-      "knowsAbout": [
-        "Steel Pipes Export", 
-        "Steel Plates", 
-        "Profile Steel", 
-        "Pipe Fittings", 
-        "International Trade", 
-        "Project Management"
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.womicsteel.com/#organization",
+          "name": "Womic Steel Group",
+          "url": "https://www.womicsteel.com",
+          "description": "Leading professional steel pipe manufacturer in China with over 20 years experience.",
+          "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Changsha City",
+            "addressRegion": "Hunan Province",
+            "addressCountry": "China"
+          },
+          "hasOfferCatalog": {
+            "@type": "OfferCatalog",
+            "name": "Steel Products Catalog",
+            "itemListElement": [
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "ERW Steel Pipe" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "SSAW & LSAW Steel Pipe" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Seamless Steel Pipe" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Stainless Steel Pipes" } }
+            ]
+          }
+        },
+        {
+          "@type": "Person",
+          "@id": "https://www.womicsteel.com/#person",
+          "name": "Flora Hu", 
+          "jobTitle": "Project Manager",
+          "email": "flora20260808@gmail.com",
+          "telephone": "+86-18875035526",
+          "worksFor": {
+            "@id": "https://www.womicsteel.com/#organization"
+          },
+          "knowsAbout": [
+            "Steel Pipes Export", 
+            "Steel Plates", 
+            "Profile Steel", 
+            "Pipe Fittings", 
+            "International Trade", 
+            "Project Management"
+          ]
+        }
       ]
     }
-  ]
-}
-</script>
+    </script>
 </head>
 <body class="bg-gray-50 text-gray-900">
 
-    <!-- 导航栏 Navigation -->
-    <nav class="fixed w-full z-40 bg-white/80 backdrop-blur-md border-b border-gray-100">
+    <!-- 导航栏 Navigation (包含移动端菜单) -->
+    <nav class="fixed w-full z-40 bg-white/90 backdrop-blur-md border-b border-gray-100">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
-                <div class="flex-shrink-0 font-bold text-2xl text-blue-800 tracking-wider">
+                <!-- Logo -->
+                <div class="flex-shrink-0 font-bold text-xl md:text-2xl text-blue-800 tracking-wider">
                     WOMIC<span class="text-gray-900">STEEL</span>
                 </div>
-                <div class="hidden md:block">
-                    <div class="ml-10 flex items-baseline space-x-8">
-                        <a href="#services" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Core Services</a>
-                        <a href="#products" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Products</a>
-                        <a href="#about" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Why Womic</a>
-                        <a href="#contact" class="bg-blue-800 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-900 transition">Get a Quote</a>
-                    </div>
+                
+                <!-- 电脑端菜单 Desktop Menu -->
+                <div class="hidden md:flex items-baseline space-x-8">
+                    <a href="#services" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium transition">Core Services</a>
+                    <a href="#products" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium transition">Products</a>
+                    <a href="#about" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium transition">Why Womic</a>
+                    <a href="mailto:flora20260808@gmail.com" class="bg-blue-800 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-900 transition shadow-md hover:shadow-lg">Get a Quote</a>
                 </div>
+
+                <!-- 手机端汉堡按钮 Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-blue-800 focus:outline-none p-2" aria-label="Toggle navigation">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- 手机端下拉菜单 (默认隐藏) Mobile Menu Panel -->
+        <div id="mobile-menu" class="hidden md:hidden bg-white border-b border-gray-100 absolute w-full left-0 top-16 shadow-2xl transition-all duration-300 origin-top">
+            <div class="px-4 pt-2 pb-6 flex flex-col space-y-3">
+                <a href="#services" class="text-gray-800 font-medium px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition" onclick="toggleMobileMenu()">Core Services</a>
+                <a href="#products" class="text-gray-800 font-medium px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition" onclick="toggleMobileMenu()">Products</a>
+                <a href="#about" class="text-gray-800 font-medium px-4 py-3 bg-gray-50 rounded-lg hover:bg-blue-50 transition" onclick="toggleMobileMenu()">Why Womic</a>
+                <a href="mailto:flora20260808@gmail.com" class="bg-blue-800 text-white font-bold px-4 py-3 rounded-lg text-center mt-2 shadow-md" onclick="toggleMobileMenu()">Get a Quote</a>
             </div>
         </div>
     </nav>
 
     <!-- 头部横幅 Hero Section -->
-    <section class="pt-32 pb-20 hero-gradient text-white">
+    <!-- 优化：在手机端(sm)和电脑端(md/lg)使用不同的内外边距和字号 -->
+    <section class="pt-28 md:pt-36 pb-16 md:pb-24 hero-gradient text-white">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h1 class="text-4xl md:text-6xl font-extrabold leading-tight mb-6">
-                One Stop <span class="text-blue-400">Steel Products</span> Supplier
+            <h1 class="text-3xl sm:text-4xl md:text-6xl font-extrabold leading-tight mb-4 md:mb-6">
+                One Stop <span class="text-blue-400 block sm:inline mt-2 sm:mt-0">Steel Products</span> Supplier
             </h1>
-            <p class="text-lg text-gray-300 mb-8 mx-auto max-w-3xl">
+            <p class="text-base sm:text-lg text-gray-300 mb-8 mx-auto max-w-3xl px-2">
                 Leading professional steel pipe manufacturer in China with over 20 years experience. Partnering with top 500 EPC contractors & Oil companies globally. Certified by SGS, BV, TUV, ABS.
             </p>
-            <div class="flex justify-center space-x-4 mb-10">
-                <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3 rounded-lg font-bold transition">View Product Catalog</a>
+            <div class="flex justify-center mb-10 md:mb-8">
+                <a href="#products" class="bg-blue-600 hover:bg-blue-700 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg font-bold transition text-sm md:text-base w-full sm:w-auto shadow-lg">View Product Catalog</a>
             </div>
             
-            <!-- 联系方式展示牌 -->
-            <div class="inline-flex flex-wrap justify-center items-center gap-6 text-sm md:text-base text-gray-200 bg-white/10 backdrop-blur-sm p-5 rounded-2xl border border-white/20">
-                <div class="flex items-center"><i class="fas fa-envelope text-blue-400 mr-3 text-xl"></i> flora20260808@gmail.com</div>
-                <div class="flex items-center"><i class="fab fa-whatsapp text-green-400 mr-3 text-xl"></i> +86 188-7503-5526</div>
+            <!-- 个人品牌与联系方式展示牌 -->
+            <div class="mt-4 flex flex-col items-center">
+                <!-- 个人商务头像 -->
+                <div class="w-20 h-20 md:w-28 md:h-28 mb-4 rounded-full border-4 border-white/20 overflow-hidden shadow-2xl relative transition hover:scale-105 duration-300">
+                    <img src="images/flora-avatar.jpg" alt="Flora Hu - Project Manager at WOMIC STEEL" class="w-full h-full object-cover" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400'">
+                </div>
+
+                <div class="bg-blue-500/20 text-blue-300 border border-blue-500/50 px-4 py-1.5 rounded-full text-xs md:text-sm font-bold mb-4 inline-flex items-center shadow-lg">
+                    <i class="fas fa-user-tie mr-2"></i> Flora Hu | Project Manager at WOMIC STEEL
+                </div>
+                
+                <!-- 联系方式 (手机端上下堆叠，电脑端左右并排) -->
+                <div class="flex flex-col sm:flex-row justify-center items-center gap-4 md:gap-6 text-sm md:text-base text-gray-200 bg-white/10 backdrop-blur-sm p-4 md:p-5 rounded-2xl border border-white/20 shadow-xl w-full max-w-md md:max-w-none">
+                    <a href="mailto:flora20260808@gmail.com" class="flex items-center justify-center hover:text-white transition w-full sm:w-auto bg-black/20 sm:bg-transparent p-3 sm:p-0 rounded-lg sm:rounded-none">
+                        <i class="fas fa-envelope text-blue-400 mr-3 text-lg md:text-xl"></i> flora20260808@gmail.com
+                    </a>
+                    <div class="hidden sm:block w-px h-6 bg-white/20"></div> <!-- 分割线，仅电脑端显示 -->
+                    <a href="https://wa.me/8618875035526" target="_blank" rel="noopener noreferrer" class="flex items-center justify-center hover:text-white transition w-full sm:w-auto bg-black/20 sm:bg-transparent p-3 sm:p-0 rounded-lg sm:rounded-none">
+                        <i class="fab fa-whatsapp text-green-400 mr-3 text-lg md:text-xl"></i> +86 188-7503-5526
+                    </a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- 产品目录 (结构化数据展示) Products Section -->
-    <section id="products" class="py-24 bg-white">
+    <!-- 产品目录 Products Section -->
+    <section id="products" class="py-16 md:py-24 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Main Products</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">Click images to view details. All products comply with ISO 9001 and international standards.</p>
+            <div class="text-center mb-10 md:mb-16">
+                <h2 class="text-2xl md:text-3xl font-bold mb-3 md:mb-4">Our Main Products</h2>
+                <p class="text-sm md:text-base text-gray-500 max-w-2xl mx-auto">Click images to view details. All products comply with ISO 9001 and international standards.</p>
             </div>
             
-            <!-- 产品网格 -->
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                
+            <!-- 产品网格 (手机1列，平板2列，电脑3列) -->
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
                 <!-- Product 1: ERW -->
                 <article class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/WOMIC - Brochure of Steel Pipes & Fittings 2026_06.png" alt="ERW Steel Pipe" class="gallery-img object-cover w-full h-full" onclick="openLightbox(this.src, 'ERW Steel Pipe: High Frequency Electric Resistance Welding')">
+                        <img src="images/products/erw-pipe.jpg" alt="ERW Steel Pipe" class="gallery-img object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=ERW+Steel+Pipe'" onclick="openLightbox(this.src, 'ERW Steel Pipe: High Frequency Electric Resistance Welding')">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">ERW Steel Pipe</h3>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>OD:</strong> 1/2" - 26" (21.3 - 660mm)</li>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">ERW Steel Pipe</h3>
+                        <ul class="text-xs md:text-sm text-gray-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>OD:</strong> 1/2" - 26"</li>
                             <li><i class="fas fa-check text-green-500 mr-2"></i><strong>WT:</strong> 0.8mm - 22.2mm</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Standard:</strong> API 5L, ASTM A53, EN10217</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Std:</strong> API 5L, ASTM A53</li>
                         </ul>
-                        <p class="text-xs text-gray-500 line-clamp-2">Widely applied in liquid delivery, petroleum and natural gas industries, oil transportation.</p>
                     </div>
                 </article>
 
                 <!-- Product 2: SSAW & LSAW -->
                 <article class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/WOMIC - Brochure of Steel Pipes & Fittings 2026_07.png" alt="SSAW & LSAW Steel Pipe" class="gallery-img object-cover w-full h-full" onclick="openLightbox(this.src, 'SSAW/LSAW Large Diameter Steel Pipes for Piling & Infrastructure')">
+                        <img src="images/products/ssaw-pipe.jpg" alt="SSAW & LSAW Steel Pipe" class="gallery-img object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=SSAW+LSAW+Pipe'" onclick="openLightbox(this.src, 'SSAW/LSAW Large Diameter Steel Pipes for Piling & Infrastructure')">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">SSAW & LSAW Pipes</h3>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>OD:</strong> 8" - 160" (219.1 - 4064mm)</li>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">SSAW & LSAW Pipes</h3>
+                        <ul class="text-xs md:text-sm text-gray-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>OD:</strong> 8" - 160"</li>
                             <li><i class="fas fa-check text-green-500 mr-2"></i><strong>WT:</strong> 5mm - 60mm</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Standard:</strong> API 5L, AWWA C200, ASTM A252</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Std:</strong> API 5L, AWWA C200</li>
                         </ul>
-                        <p class="text-xs text-gray-500 line-clamp-2">Suitable for above-ground/underground water supply, piling, and infrastructure development.</p>
                     </div>
                 </article>
 
                 <!-- Product 3: SMLS -->
                 <article class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/WOMIC - Brochure of Steel Pipes & Fittings 2026_08.png" alt="Seamless Steel Pipe" class="gallery-img object-cover w-full h-full" onclick="openLightbox(this.src, 'Seamless Carbon Steel Pipes (Hot rolled & Cold drawn)')">
+                        <img src="images/products/smls-pipe.jpg" alt="Seamless Steel Pipe" class="gallery-img object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Seamless+Pipe'" onclick="openLightbox(this.src, 'Seamless Carbon Steel Pipes (Hot rolled & Cold drawn)')">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Seamless (SMLS) Pipe</h3>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>OD:</strong> 1/8" - 36" (10.3 - 914.4mm)</li>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Seamless (SMLS) Pipe</h3>
+                        <ul class="text-xs md:text-sm text-gray-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>OD:</strong> 1/8" - 36"</li>
                             <li><i class="fas fa-check text-green-500 mr-2"></i><strong>WT:</strong> 1.65mm - 60mm</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Standard:</strong> API 5CT, ASTM A106/A333</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Std:</strong> API 5CT, ASTM A106</li>
                         </ul>
-                        <p class="text-xs text-gray-500 line-clamp-2">Used to convey liquids, gases, and powders. Includes Casing, Tubing, and Drill Pipes.</p>
                     </div>
                 </article>
 
                 <!-- Product 4: Stainless -->
                 <article class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/WOMIC - Brochure of Steel Pipes & Fittings 2026_09.png" alt="Stainless Steel Pipes" class="gallery-img object-cover w-full h-full" onclick="openLightbox(this.src, 'Stainless Steel Pipes (Seamless & Welded)')">
+                        <img src="images/products/stainless-pipe.jpg" alt="Stainless Steel Pipes" class="gallery-img object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Stainless+Steel'" onclick="openLightbox(this.src, 'Stainless Steel Pipes (Seamless & Welded)')">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Stainless Steel Pipes</h3>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Stainless Steel Pipes</h3>
+                        <ul class="text-xs md:text-sm text-gray-600 space-y-2 mb-4">
                             <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Size:</strong> 1/8" - 80"</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Grade:</strong> 304/L, 316/L, S31803 (Duplex)</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Grade:</strong> 304/L, 316/L, S31803</li>
                             <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Type:</strong> Seamless & Welded</li>
                         </ul>
-                        <p class="text-xs text-gray-500 line-clamp-2">Exceptional durability and corrosion resistance for modern industrial applications.</p>
                     </div>
                 </article>
 
                 <!-- Product 5: Fittings & Flanges -->
                 <article class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/WOMIC - Brochure of Steel Pipes & Fittings 2026_10.png" alt="Steel Pipe Fittings & Flanges" class="gallery-img object-cover w-full h-full" onclick="openLightbox(this.src, 'Steel Pipe Fittings: Elbows, Tees, Reducers & Flanges')">
+                        <img src="images/products/pipe-fittings.jpg" alt="Steel Pipe Fittings & Flanges" class="gallery-img object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Fittings+Flanges'" onclick="openLightbox(this.src, 'Steel Pipe Fittings: Elbows, Tees, Reducers & Flanges')">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Fittings & Flanges</h3>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Types:</strong> Elbows, Bends, Tees, WN/SO Flanges</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Size:</strong> 1/4" - 60" (DN8-DN1500)</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Standard:</strong> ASME B16.9, B16.5, MSS-SP-75</li>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Fittings & Flanges</h3>
+                        <ul class="text-xs md:text-sm text-gray-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Types:</strong> Elbows, Tees, Flanges</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Size:</strong> 1/4" - 60"</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Std:</strong> ASME B16.9, MSS-SP-75</li>
                         </ul>
-                        <p class="text-xs text-gray-500 line-clamp-2">Carbon steel, alloy steel, and stainless steel fittings for secure piping system connections.</p>
                     </div>
                 </article>
 
                 <!-- Product 6: Valves -->
                 <article class="bg-gray-50 rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover">
                     <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/WOMIC - Brochure of Steel Pipes & Fittings 2026_11.png" alt="Industrial Valves" class="gallery-img object-cover w-full h-full" onclick="openLightbox(this.src, 'Industrial Valves: Gate, Globe, Ball, Check Valves')">
+                        <img src="images/products/industrial-valves.jpg" alt="Industrial Valves" class="gallery-img object-cover w-full h-full" onerror="this.src='https://placehold.co/800x600/1e293b/ffffff?text=Industrial+Valves'" onclick="openLightbox(this.src, 'Industrial Valves: Gate, Globe, Ball, Check Valves')">
                     </div>
-                    <div class="p-6">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Industrial Valves</h3>
-                        <ul class="text-sm text-gray-600 space-y-2 mb-4">
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Types:</strong> Gate, Globe, Ball, Check, Butterfly</li>
+                    <div class="p-5 md:p-6">
+                        <h3 class="text-lg md:text-xl font-bold text-gray-900 mb-3">Industrial Valves</h3>
+                        <ul class="text-xs md:text-sm text-gray-600 space-y-2 mb-4">
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Types:</strong> Gate, Globe, Ball, Check</li>
                             <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Size:</strong> 1/2" - 120"</li>
-                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Standard:</strong> API 600, API 602, API 598</li>
+                            <li><i class="fas fa-check text-green-500 mr-2"></i><strong>Std:</strong> API 600, API 598</li>
                         </ul>
-                        <p class="text-xs text-gray-500 line-clamp-2">Essential components to control, regulate, and direct fluid flow in petrochemical pipelines.</p>
                     </div>
                 </article>
 
@@ -245,23 +255,23 @@
     </section>
 
     <!-- 优势服务 Services Section -->
-    <section id="services" class="py-24 bg-gray-50">
+    <section id="services" class="py-16 md:py-24 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-3xl font-bold mb-4">Manufacturing & Processing Capabilities</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mt-12">
-                <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Manufacturing Capabilities</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8 mt-10 md:mt-12">
+                <div class="p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
                     <div class="text-blue-600 text-3xl mb-4"><i class="fas fa-cogs"></i></div>
-                    <h3 class="font-bold mb-2">Deep Machining</h3>
+                    <h3 class="text-lg font-bold mb-2">Deep Machining</h3>
                     <p class="text-sm text-gray-500">Offering Threaded ends, Grooved ends, Beveled ends, Spot Holing, and Custom spools welding.</p>
                 </div>
-                <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+                <div class="p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
                     <div class="text-green-600 text-3xl mb-4"><i class="fas fa-shield-alt"></i></div>
-                    <h3 class="font-bold mb-2">Anti-Corrosion</h3>
+                    <h3 class="text-lg font-bold mb-2">Anti-Corrosion</h3>
                     <p class="text-sm text-gray-500">Expert in 3PE/3LPE, FBE, Epoxy coating, Hot Dipped Galvanized, and Thermal Insulation coatings.</p>
                 </div>
-                <div class="p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
+                <div class="p-6 md:p-8 bg-white rounded-2xl shadow-sm border border-gray-100">
                     <div class="text-purple-600 text-3xl mb-4"><i class="fas fa-microscope"></i></div>
-                    <h3 class="font-bold mb-2">Strict QC & Testing</h3>
+                    <h3 class="text-lg font-bold mb-2">Strict QC & Testing</h3>
                     <p class="text-sm text-gray-500">100% UT/NDT, Hydrostatic test, Impact test. Accepting TUV, SGS, ABS, LR third-party inspections.</p>
                 </div>
             </div>
@@ -270,24 +280,45 @@
 
     <!-- 灯箱弹窗 (默认隐藏) Modal/Lightbox -->
     <div id="lightbox" class="fixed inset-0 z-50 bg-gray-900/95 hidden flex flex-col items-center justify-center backdrop-blur-sm" onclick="closeLightbox(event)">
-        <button class="absolute top-6 right-8 text-white hover:text-blue-400 text-4xl font-light focus:outline-none transition" onclick="closeLightbox(event)">&times;</button>
-        <div class="relative max-w-5xl max-h-[80vh] w-full px-4 flex justify-center items-center">
-            <img id="lightbox-img" src="" alt="Enlarged view" class="max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl">
+        <button class="absolute top-4 right-4 md:top-6 md:right-8 text-white hover:text-blue-400 text-3xl md:text-4xl font-light focus:outline-none transition z-50 bg-black/50 w-10 h-10 rounded-full flex items-center justify-center" onclick="closeLightbox(event)">&times;</button>
+        <div class="relative max-w-5xl max-h-[80vh] w-full px-2 flex justify-center items-center mt-8">
+            <img id="lightbox-img" src="" alt="Enlarged view" class="max-h-[70vh] md:max-h-[80vh] max-w-full object-contain rounded-lg shadow-2xl">
         </div>
-        <p id="lightbox-caption" class="text-white mt-6 text-lg md:text-xl font-medium px-4 text-center max-w-3xl"></p>
+        <p id="lightbox-caption" class="text-white mt-4 md:mt-6 text-sm md:text-xl font-medium px-4 text-center max-w-3xl"></p>
     </div>
 
     <!-- 页脚 Footer -->
-    <footer class="bg-gray-900 text-gray-400 py-12 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-sm">
-            <p class="font-bold text-white mb-2">WOMIC STEEL GROUP</p>
+    <footer id="about" class="bg-gray-900 text-gray-400 py-10 md:py-12 border-t border-gray-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-xs md:text-sm">
+            <p class="font-bold text-white mb-2 text-base">WOMIC STEEL GROUP</p>
             <p>Lugu Industrial Park, YueLu District, Changsha City, Hunan Province, China</p>
-            <p class="mt-4">&copy; 2026 Womic Steel. All rights reserved.</p>
+            <p class="mt-2 text-gray-500">Website managed by Flora Hu - Project Manager</p>
+            <p class="mt-4 border-t border-gray-800 pt-4">&copy; 2026 Womic Steel. All rights reserved.</p>
         </div>
     </footer>
 
-    <!-- JavaScript 脚本处理灯箱交互 -->
+    <!-- JavaScript 脚本处理灯箱交互与移动端菜单 -->
     <script>
+        // 处理手机端导航栏菜单的展开和折叠
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            const icon = document.querySelector('#mobile-menu-btn i');
+            
+            if (menu.classList.contains('hidden')) {
+                menu.classList.remove('hidden');
+                icon.classList.remove('fa-bars');
+                icon.classList.add('fa-times'); // 变成叉叉
+            } else {
+                menu.classList.add('hidden');
+                icon.classList.remove('fa-times');
+                icon.classList.add('fa-bars'); // 变回三条杠
+            }
+        }
+
+        // 绑定手机端菜单按钮点击事件
+        document.getElementById('mobile-menu-btn').addEventListener('click', toggleMobileMenu);
+
+        // 灯箱逻辑
         function openLightbox(imageSrc, captionText) {
             const lightbox = document.getElementById('lightbox');
             const img = document.getElementById('lightbox-img');
@@ -297,28 +328,16 @@
             lightbox.classList.remove('hidden');
             document.body.style.overflow = 'hidden'; 
         }
+
         function closeLightbox(event) {
-            // 只在点击灯箱背景区域（深灰色区域）时关闭，而不是点击内容区域
-            if (event.target.id !== 'lightbox') return;
+            if (event.target.id === 'lightbox-img') return;
             const lightbox = document.getElementById('lightbox');
             lightbox.classList.add('hidden');
             document.body.style.overflow = 'auto';
         }
-        // 按钮单独处理关闭
-        document.querySelector('#lightbox button').addEventListener('click', function() {
-            const lightbox = document.getElementById('lightbox');
-            lightbox.classList.add('hidden');
-            document.body.style.overflow = 'auto';
-        });
-        // Escape 键关闭灯箱
+
         document.addEventListener('keydown', function(event) {
-            if (event.key === "Escape") {
-                const lightbox = document.getElementById('lightbox');
-                if (!lightbox.classList.contains('hidden')) {
-                    lightbox.classList.add('hidden');
-                    document.body.style.overflow = 'auto';
-                }
-            }
+            if (event.key === "Escape") closeLightbox({target: document.getElementById('lightbox')});
         });
     </script>
 </body>
