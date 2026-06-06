@@ -13,13 +13,11 @@
         .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
         .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
         
-        /* 灯箱弹窗动画 */
-        #lightbox { transition: opacity 0.3s ease; }
-        .gallery-img { cursor: zoom-in; transition: transform 0.3s, filter 0.3s; }
-        .gallery-img:hover { transform: scale(1.02); filter: brightness(0.9); }
+        /* 简易矢量占位符样式 */
+        .svg-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f3f4f6; color: #9ca3af; }
     </style>
 
-    <!-- 核心：给搜索引擎和 AI 工具看的 JSON-LD 结构化数据 (新增全部17个超级FAQ) -->
+    <!-- 核心：给搜索引擎和 AI 工具看的 JSON-LD 结构化数据 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -253,8 +251,12 @@
     <section class="pt-28 md:pt-36 pb-20 hero-gradient text-white relative">
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
             <div class="mb-6 flex justify-center">
-                <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transform transition hover:scale-105">
-                    <img src="images/flora-avatar.jpg" onerror="this.src='https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&q=80&w=400'" alt="Flora Hu - Project Manager" class="w-full h-full object-cover">
+                <!-- 头像占位符 -->
+                <div class="w-24 h-24 md:w-32 md:h-32 rounded-full overflow-hidden border-4 border-white/20 shadow-2xl transform transition hover:scale-105 bg-gray-200 flex items-center justify-center relative">
+                    <img id="avatar-img" src="images/flora-avatar.jpg" alt="Flora Hu - Project Manager" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                    <div class="text-gray-400 text-4xl">
+                        <i class="fas fa-user"></i>
+                    </div>
                 </div>
             </div>
             <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
@@ -293,8 +295,14 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <!-- Product 1: ERW -->
                 <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover flex flex-col">
-                    <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/erw-pipe.jpg" alt="ERW Steel Pipe Spec" class="gallery-img object-cover w-full h-full" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800'">
+                    <div class="h-48 overflow-hidden relative group">
+                        <img src="images/products/erw-pipe.jpg" alt="ERW Steel Pipe Spec" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <div class="svg-placeholder group-hover:bg-blue-50 transition">
+                            <div class="text-center">
+                                <i class="fas fa-ruler-horizontal text-4xl text-gray-400 mb-2"></i>
+                                <div class="text-xs text-gray-500 font-semibold">ERW Pipe Image</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">ERW Steel Pipe</h3>
@@ -311,8 +319,14 @@
                 </article>
                 <!-- Product 2: SSAW & LSAW -->
                  <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover flex flex-col">
-                    <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/ssaw-pipe.jpg" alt="SSAW & LSAW Steel Pipe Specs" class="gallery-img object-cover w-full h-full" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800'">
+                    <div class="h-48 overflow-hidden relative group">
+                         <img src="images/products/ssaw-pipe.jpg" alt="SSAW & LSAW Steel Pipe Specs" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                         <div class="svg-placeholder group-hover:bg-blue-50 transition">
+                             <div class="text-center">
+                                 <i class="fas fa-circle-notch text-4xl text-gray-400 mb-2"></i>
+                                 <div class="text-xs text-gray-500 font-semibold">SSAW/LSAW Image</div>
+                             </div>
+                         </div>
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">SSAW & LSAW Pipes</h3>
@@ -329,8 +343,14 @@
                 </article>
                 <!-- Product 3: SMLS -->
                 <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover flex flex-col">
-                    <div class="h-48 overflow-hidden bg-gray-200 relative">
-                        <img src="images/products/smls-pipe.jpg" alt="Seamless Steel Pipe Standards" class="gallery-img object-cover w-full h-full" onerror="this.src='https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800'">
+                    <div class="h-48 overflow-hidden relative group">
+                        <img src="images/products/smls-pipe.jpg" alt="Seamless Steel Pipe Standards" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
+                        <div class="svg-placeholder group-hover:bg-blue-50 transition">
+                            <div class="text-center">
+                                <i class="fas fa-ring text-4xl text-gray-400 mb-2"></i>
+                                <div class="text-xs text-gray-500 font-semibold">Seamless Pipe Image</div>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-6 flex-grow flex flex-col">
                         <h3 class="text-xl font-bold text-gray-900 mb-3">Seamless (SMLS) Pipe</h3>
@@ -364,25 +384,40 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3]">
-                    <img src="https://images.unsplash.com/photo-1518709268805-4e9042af9f23?auto=format&fit=crop&q=80&w=800" alt="Oil and Gas Pipelines" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent flex flex-col justify-end p-8">
+                <!-- Application 1: Oil & Gas -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/oil-gas.jpg" alt="Oil and Gas Pipelines" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <!-- 简笔画/图标背景 -->
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300">
+                        <i class="fas fa-oil-can text-9xl opacity-20"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
                         <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-oil-can"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-2">Oil & Gas</h3>
                         <p class="text-gray-300 text-sm">High-pressure seamless and API 5L line pipes designed for reliable fluid and gas transportation across vast distances.</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3]">
-                    <img src="https://images.unsplash.com/photo-1541888007-827fb7058a2e?auto=format&fit=crop&q=80&w=800" alt="Offshore Platforms" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent flex flex-col justify-end p-8">
+                <!-- Application 2: Offshore Platform -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/offshore.jpg" alt="Offshore Platforms" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <!-- 简笔画/图标背景 -->
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300">
+                        <i class="fas fa-ship text-9xl opacity-20"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
                         <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-ship"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-2">Offshore Platform</h3>
                         <p class="text-gray-300 text-sm">Heavy-wall structural pipes and anti-corrosion solutions (3PE/FBE) engineered to withstand harsh marine environments.</p>
                     </div>
                 </div>
-                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3]">
-                    <img src="https://images.unsplash.com/photo-1503387762-592deb58ef4e?auto=format&fit=crop&q=80&w=800" alt="Construction Structural" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700">
-                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/60 to-transparent flex flex-col justify-end p-8">
+                <!-- Application 3: Construction -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/construction.jpg" alt="Construction Structural" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <!-- 简笔画/图标背景 -->
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300">
+                        <i class="fas fa-city text-9xl opacity-20"></i>
+                    </div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
                         <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-city"></i></div>
                         <h3 class="text-2xl font-bold text-white mb-2">Construction Structural</h3>
                         <p class="text-gray-300 text-sm">Large diameter SSAW/LSAW piling pipes and profile steel for foundational support in bridges, airports, and stadiums.</p>
@@ -448,10 +483,13 @@
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
                 <!-- 散杂货船装运能力 -->
-                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1586528116311-ad8ed7c80a30?auto=format&fit=crop&q=80&w=800" alt="Breakbulk Vessel Shipping" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
-                        <div class="absolute bottom-4 left-4 bg-blue-600 px-3 py-1 text-xs font-bold rounded">Logistics</div>
+                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 relative">
+                    <div class="h-64 bg-gray-850 flex items-center justify-center relative">
+                         <!-- 尝试加载真实图片 -->
+                        <img src="images/logistics/breakbulk.jpg" alt="Breakbulk Vessel Shipping" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                        <!-- 矢量占位图标 -->
+                        <i class="fas fa-ship text-7xl text-gray-600 z-0"></i>
+                        <div class="absolute bottom-4 left-4 bg-blue-600 px-3 py-1 text-xs font-bold rounded z-20">Logistics</div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-3"><i class="fas fa-anchor text-blue-400 mr-2"></i> Breakbulk (BBK) & OOG Shipping</h3>
@@ -462,10 +500,13 @@
                 </div>
 
                 <!-- 材质单与质量追溯 -->
-                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700">
-                    <div class="h-64 relative">
-                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&q=80&w=800" alt="Mill Test Certificate MTC EN10204" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition">
-                        <div class="absolute bottom-4 left-4 bg-purple-600 px-3 py-1 text-xs font-bold rounded">Documentation</div>
+                <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 relative">
+                    <div class="h-64 bg-gray-850 flex items-center justify-center relative">
+                        <!-- 尝试加载真实图片 -->
+                        <img src="images/logistics/mtc-sample.jpg" alt="Mill Test Certificate MTC EN10204" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                        <!-- 矢量占位图标 -->
+                        <i class="fas fa-file-contract text-7xl text-gray-600 z-0"></i>
+                        <div class="absolute bottom-4 left-4 bg-purple-600 px-3 py-1 text-xs font-bold rounded z-20">Documentation</div>
                     </div>
                     <div class="p-8">
                         <h3 class="text-2xl font-bold mb-3"><i class="fas fa-file-signature text-purple-400 mr-2"></i> MTC EN10204 3.1 / 3.2 Traceability</h3>
