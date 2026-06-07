@@ -12,9 +12,9 @@
         body { font-family: 'Inter', sans-serif; scroll-behavior: smooth; }
         .hero-gradient { background: linear-gradient(135deg, #1e293b 0%, #0f172a 100%); }
         .card-hover:hover { transform: translateY(-5px); transition: all 0.3s ease; }
-        
-        /* 简易矢量占位符样式 */
         .svg-placeholder { width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; background-color: #f3f4f6; color: #9ca3af; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
     </style>
 
     <!-- 核心：给搜索引擎和 AI 工具看的 JSON-LD 结构化数据 -->
@@ -39,9 +39,14 @@
             "name": "Steel Products Catalog",
             "itemListElement": [
               { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "ERW Steel Pipe" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "SSAW & LSAW Steel Pipe" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Seamless Steel Pipe" } },
-              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Stainless Steel Pipes" } }
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "SSAW Steel Pipe" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "LSAW Steel Pipe" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Seamless (SMLS) Steel Pipe" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Stainless Steel Pipes" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Pipe Fittings & Flanges" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Boiler Steel Tubes" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Galvanized Steel Pipes" } },
+              { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Steel Plates & Profiles" } }
             ]
           }
         },
@@ -57,10 +62,14 @@
           },
           "knowsAbout": [
             "Steel Pipes Export", 
-            "Steel Plates", 
-            "Profile Steel", 
-            "Pipe Fittings", 
-            "International Trade", 
+            "Pipe End Customizing", 
+            "3PE/3LPE Coating",
+            "FBE Coating",
+            "Epoxy Coating",
+            "Hot Dipped Galvanized",
+            "Threaded & Grooved End", 
+            "Flanges & Cross Bar Welding",
+            "Clutch Lock Welding",
             "Project Management"
           ]
         },
@@ -113,14 +122,6 @@
               "acceptedAnswer": {
                 "@type": "Answer",
                 "text": "Yes, we confidently accept and cooperate with third-party inspections such as TUV, SGS, Intertek, ABS, and LR before shipment to guarantee 100% quality."
-              }
-            },
-            {
-              "@type": "Question",
-              "name": "What kind of anti-corrosion processing can you provide?",
-              "acceptedAnswer": {
-                "@type": "Answer",
-                "text": "We provide advanced anti-corrosion solutions including 3PE/3LPE coating, FBE coating, Epoxy coating, Hot Dipped Galvanized, and Thermal Insulation coatings for various environments."
               }
             },
             {
@@ -227,8 +228,9 @@
                     <div class="ml-10 flex items-baseline space-x-6">
                         <a href="#products" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Products</a>
                         <a href="#applications" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Applications</a>
-                        <a href="#qc-process" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">QC</a>
-                        <a href="#logistics" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Logistics & Docs</a>
+                        <a href="#services" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Services</a>
+                        <a href="#qc-customizing" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Fabrication & Coatings</a>
+                        <a href="#logistics" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">Logistics</a>
                         <a href="#faq" class="text-gray-600 hover:text-blue-800 px-3 py-2 font-medium">FAQ</a>
                         <a href="mailto:flora20260808@gmail.com" class="bg-blue-800 text-white px-6 py-2 rounded-full font-medium hover:bg-blue-900 transition">Get a Quote</a>
                     </div>
@@ -238,8 +240,9 @@
                 <div class="flex flex-col space-y-2 mt-2">
                     <a href="#products" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">Products</a>
                     <a href="#applications" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">Applications</a>
-                    <a href="#qc-process" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">QC</a>
-                    <a href="#logistics" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">Logistics & Docs</a>
+                    <a href="#services" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">Services</a>
+                    <a href="#qc-customizing" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">Fabrication & Coatings</a>
+                    <a href="#logistics" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">Logistics</a>
                     <a href="#faq" class="text-gray-600 px-3 py-2 font-medium border-b border-gray-100">FAQ</a>
                     <a href="mailto:flora20260808@gmail.com" class="text-blue-600 font-bold px-3 py-2">Email Us</a>
                 </div>
@@ -284,195 +287,550 @@
         </div>
     </section>
 
-    <!-- 产品目录 Products Section -->
-    <section id="products" class="py-20 bg-gray-50">
+    <!-- 【标准升级】产品目录幻灯片 Products Section -->
+    <section id="products" class="py-20 bg-gray-50 overflow-hidden">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-3xl font-bold mb-4">Our Main Products</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">Click on the specifications below to see our manufacturing capabilities for various global projects.</p>
+            <div class="text-center mb-10">
+                <h2 class="text-3xl font-bold mb-4">Our Core Product Categories</h2>
+                <p class="text-gray-500 max-w-2xl mx-auto">Providing a complete range of steel pipes and fittings. Swipe or use arrows to view our full catalog.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                <!-- Product 1: ERW -->
-                <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/products/erw-pipe.jpg" alt="ERW Steel Pipe Spec" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
-                        <div class="svg-placeholder group-hover:bg-blue-50 transition">
-                            <div class="text-center">
-                                <i class="fas fa-ruler-horizontal text-4xl text-gray-400 mb-2"></i>
-                                <div class="text-xs text-gray-500 font-semibold">ERW Pipe Image</div>
+            <div class="relative group">
+                <button onclick="slideLeft()" class="absolute left-0 top-1/2 -translate-y-1/2 -ml-4 z-20 bg-white/90 text-blue-600 w-12 h-12 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] hover:bg-blue-50 focus:outline-none flex items-center justify-center border border-gray-100 hidden md:flex transition-transform hover:scale-110">
+                    <i class="fas fa-chevron-left text-xl"></i>
+                </button>
+
+                <div id="product-slider" class="flex gap-6 overflow-x-auto snap-x snap-mandatory no-scrollbar pb-8 pt-4 px-2" style="scroll-behavior: smooth;">
+                    
+                    <!-- Product 1: ERW -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/erw-pipe.jpg" alt="ERW Steel Pipe" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-grip-lines-vertical text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">ERW Pipe Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">ERW Steel Pipe</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">High-frequency straight seam welded pipes for low-to-medium pressure fluid delivery.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">1/2" - 26"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-2 py-2 border-b border-gray-200">0.8mm - 22.2mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">API 5L, ASTM A53/A178/A252, EN10217/10219, GB/T9711</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">ERW Steel Pipe</h3>
-                        <div class="overflow-x-auto mt-auto">
-                            <table class="w-full text-sm text-left text-gray-600 border border-gray-200">
-                                <tbody>
-                                    <tr class="bg-gray-50"><td class="px-3 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-3 py-2 border-b border-gray-200">1/2" - 26"</td></tr>
-                                    <tr><td class="px-3 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-3 py-2 border-b border-gray-200">0.8mm - 22.2mm</td></tr>
-                                    <tr class="bg-gray-50"><td class="px-3 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-3 py-2">API 5L, ASTM A53</td></tr>
-                                </tbody>
-                            </table>
+                    </article>
+
+                    <!-- Product 2: SSAW -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                             <img src="images/products/ssaw-pipe.jpg" alt="SSAW Steel Pipe" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                             <div class="svg-placeholder"><div class="text-center"><i class="fas fa-water text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">SSAW Pipe Image</div></div></div>
                         </div>
-                    </div>
-                </article>
-                <!-- Product 2: SSAW & LSAW -->
-                 <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                         <img src="images/products/ssaw-pipe.jpg" alt="SSAW & LSAW Steel Pipe Specs" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
-                         <div class="svg-placeholder group-hover:bg-blue-50 transition">
-                             <div class="text-center">
-                                 <i class="fas fa-circle-notch text-4xl text-gray-400 mb-2"></i>
-                                 <div class="text-xs text-gray-500 font-semibold">SSAW/LSAW Image</div>
-                             </div>
-                         </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">SSAW & LSAW Pipes</h3>
-                        <div class="overflow-x-auto mt-auto">
-                            <table class="w-full text-sm text-left text-gray-600 border border-gray-200">
-                                <tbody>
-                                    <tr class="bg-gray-50"><td class="px-3 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-3 py-2 border-b border-gray-200">8" - 160"</td></tr>
-                                    <tr><td class="px-3 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-3 py-2 border-b border-gray-200">5mm - 60mm</td></tr>
-                                    <tr class="bg-gray-50"><td class="px-3 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-3 py-2">API 5L, AWWA C200</td></tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </article>
-                <!-- Product 3: SMLS -->
-                <article class="bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm card-hover flex flex-col">
-                    <div class="h-48 overflow-hidden relative group">
-                        <img src="images/products/smls-pipe.jpg" alt="Seamless Steel Pipe Standards" class="w-full h-full object-cover hidden" onload="this.classList.remove('hidden'); this.nextElementSibling.classList.add('hidden');" onerror="this.classList.add('hidden'); this.nextElementSibling.classList.remove('hidden');">
-                        <div class="svg-placeholder group-hover:bg-blue-50 transition">
-                            <div class="text-center">
-                                <i class="fas fa-ring text-4xl text-gray-400 mb-2"></i>
-                                <div class="text-xs text-gray-500 font-semibold">Seamless Pipe Image</div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">SSAW Steel Pipe</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">Spiral submerged arc welded pipes for water transportation grids and piling projects.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">8" - 160"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-2 py-2 border-b border-gray-200">5.0mm - 25.4mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">API 5L, ASTM A53/A252, AWWA C200/C210/C213, EN10219</td></tr>
+                                    </tbody>
+                                </table>
                             </div>
                         </div>
-                    </div>
-                    <div class="p-6 flex-grow flex flex-col">
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Seamless (SMLS) Pipe</h3>
-                        <div class="overflow-x-auto mt-auto">
-                            <table class="w-full text-sm text-left text-gray-600 border border-gray-200">
-                                <tbody>
-                                    <tr class="bg-gray-50"><td class="px-3 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-3 py-2 border-b border-gray-200">1/8" - 36"</td></tr>
-                                    <tr><td class="px-3 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-3 py-2 border-b border-gray-200">1.65mm - 60mm</td></tr>
-                                    <tr class="bg-gray-50"><td class="px-3 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-3 py-2">API 5CT, ASTM A106</td></tr>
-                                </tbody>
-                            </table>
+                    </article>
+
+                    <!-- Product 3: LSAW -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                             <img src="images/products/lsaw-pipe.jpg" alt="LSAW Steel Pipe" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                             <div class="svg-placeholder"><div class="text-center"><i class="fas fa-layer-group text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">LSAW Pipe Image</div></div></div>
                         </div>
-                    </div>
-                </article>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">LSAW Steel Pipe</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">Engineered for extreme environments like high-pressure oil/gas transmission.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">16" - 60"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-2 py-2 border-b border-gray-200">8.0mm - 60.0mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">API 5L (PSL1/2), API 2B, ASTM A53/A252/A672, EN10217</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 4: SMLS -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/smls-pipe.jpg" alt="Seamless Steel Pipe" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-ring text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">SMLS Pipe Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Seamless (SMLS) Pipe</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">Superior strength and pressure resistance for critical petrochemical tubing.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">1/8" - 36"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-2 py-2 border-b border-gray-200">1.65mm - 60mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">API 5L/5CT/5D, ASTM A106/A53/A333/A335, EN10210</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 5: Stainless Steel -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/stainless-pipe.jpg" alt="Stainless Steel Pipe" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-shield-alt text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">Stainless Pipe Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Stainless Steel Pipes</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">Highly corrosion-resistant pipes essential for food processing and chemical plants.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">1/8" - 80"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">Grade</td><td class="px-2 py-2 border-b border-gray-200">304/L, 316/L, S31803</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">ASTM A312/A213/A269/A358/A789/A554/A249, DIN/JIS</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 6: Pipe Fittings & Flanges -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/pipe-fittings.jpg" alt="Pipe Fittings and Flanges" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-wrench text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">Fittings Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Pipe Fittings & Flanges</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">A complete range of industrial connectors including elbows, tees, and forged flanges.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">Type</td><td class="px-2 py-2 border-b border-gray-200">Elbows, Tees, Flanges</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">Size</td><td class="px-2 py-2 border-b border-gray-200">1/2" - 60"</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">ASME B16.9/B16.5/B16.11/B16.47, MSS-SP-75, EN 1092-1</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 7: Boiler Steel Tubes -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/boiler-tube.jpg" alt="Boiler Steel Tubes" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-fire text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">Boiler Tube Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Boiler Steel Tubes</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">High-temperature resistant tubes specifically for heat exchangers and superheaters.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">1/2" - 24"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-2 py-2 border-b border-gray-200">2.0mm - 30.0mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">ASTM A179/A210/A335, DIN 17175, GB/T 5310, EN10216</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 8: Galvanized Steel Pipes -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/galvanized-pipe.jpg" alt="Galvanized Steel Pipes" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-tint-slash text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">Galvanized Pipe Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Galvanized Steel Pipes</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">Hot-dipped galvanized (HDG) steel pipes providing exceptional rust protection.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">OD</td><td class="px-2 py-2 border-b border-gray-200">1/2" - 12"</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">WT</td><td class="px-2 py-2 border-b border-gray-200">1.2mm - 12.0mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">BS 1387, ASTM A53, EN 10255, GB/T 3091</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- Product 9: Steel Plates & Profiles -->
+                    <article class="flex-none w-[85vw] sm:w-[350px] md:w-[380px] snap-center bg-white rounded-2xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-lg transition-shadow flex flex-col">
+                        <div class="h-48 overflow-hidden relative">
+                            <img src="images/products/steel-plate.jpg" alt="Steel Plates and Profiles" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="svg-placeholder"><div class="text-center"><i class="fas fa-layer-group text-4xl text-blue-300 mb-2"></i><div class="text-xs text-gray-500 font-semibold mt-2">Steel Plate Image</div></div></div>
+                        </div>
+                        <div class="p-6 flex-grow flex flex-col">
+                            <h3 class="text-xl font-bold text-gray-900 mb-2">Steel Plates & Profiles</h3>
+                            <p class="text-xs text-gray-500 mb-4 leading-relaxed">Carbon steel plates, coils, and profile steel for massive structural engineering.</p>
+                            <div class="overflow-x-auto mt-auto">
+                                <table class="w-full text-xs md:text-sm text-left text-gray-600 border border-gray-200">
+                                    <tbody>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 w-1/3">Type</td><td class="px-2 py-2 border-b border-gray-200">Plates, Coils, H-Beams</td></tr>
+                                        <tr><td class="px-2 py-2 font-semibold border-b border-r border-gray-200 bg-gray-50">Thick</td><td class="px-2 py-2 border-b border-gray-200">1.5mm - 100mm</td></tr>
+                                        <tr class="bg-gray-50"><td class="px-2 py-2 font-semibold border-r border-gray-200">Standard</td><td class="px-2 py-2">ASTM A36/A572/A283, EN S235/S355, Q355B</td></tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <button onclick="slideRight()" class="absolute right-0 top-1/2 -translate-y-1/2 -mr-4 z-20 bg-white/90 text-blue-600 w-12 h-12 rounded-full shadow-[0_4px_15px_rgba(0,0,0,0.1)] hover:bg-blue-50 focus:outline-none flex items-center justify-center border border-gray-100 hidden md:flex transition-transform hover:scale-110">
+                    <i class="fas fa-chevron-right text-xl"></i>
+                </button>
             </div>
-            <div class="mt-10 text-center">
-                 <a href="mailto:flora20260808@gmail.com" class="inline-flex items-center text-blue-600 font-bold hover:text-blue-800 transition">
-                     Require full specifications? Contact Project Manager <i class="fas fa-arrow-right ml-2"></i>
-                 </a>
+            
+            <div class="mt-4 text-center md:hidden text-gray-400 text-sm flex items-center justify-center gap-2">
+                <i class="fas fa-arrows-alt-h"></i> Swipe to see more products
             </div>
         </div>
     </section>
 
-    <!-- 行业应用场景 (Project Application) -->
+    <!-- 【全面扩充】9大行业应用场景 (Project Application 3x3 Grid) -->
     <section id="applications" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
                 <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Industries We Serve</span>
                 <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-900">Global Project Applications</h2>
-                <p class="text-gray-500 max-w-2xl mx-auto">Providing high-grade steel solutions tailored for critical infrastructure and demanding environments worldwide.</p>
+                <p class="text-gray-500 max-w-2xl mx-auto">Providing high-grade steel solutions tailored for critical infrastructure, energy, and demanding environments worldwide.</p>
             </div>
             
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
                 <!-- Application 1: Oil & Gas -->
                 <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
                     <img src="images/applications/oil-gas.jpg" alt="Oil and Gas Pipelines" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
-                    <!-- 简笔画/图标背景 -->
-                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300">
-                        <i class="fas fa-oil-can text-9xl opacity-20"></i>
-                    </div>
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-oil-can text-9xl opacity-20"></i></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
                         <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-oil-can"></i></div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Oil & Gas</h3>
+                        <h3 class="text-2xl font-bold text-white mb-2">Oil & Gas Transmission</h3>
                         <p class="text-gray-300 text-sm">High-pressure seamless and API 5L line pipes designed for reliable fluid and gas transportation across vast distances.</p>
                     </div>
                 </div>
-                <!-- Application 2: Offshore Platform -->
+
+                <!-- Application 2: Offshore & Onshore -->
                 <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
-                    <img src="images/applications/offshore.jpg" alt="Offshore Platforms" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
-                    <!-- 简笔画/图标背景 -->
-                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300">
-                        <i class="fas fa-ship text-9xl opacity-20"></i>
-                    </div>
+                    <img src="images/applications/offshore.jpg" alt="Offshore and Onshore Platforms" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-ship text-9xl opacity-20"></i></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
-                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-ship"></i></div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Offshore Platform</h3>
-                        <p class="text-gray-300 text-sm">Heavy-wall structural pipes and anti-corrosion solutions (3PE/FBE) engineered to withstand harsh marine environments.</p>
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-gas-pump"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Offshore & Onshore</h3>
+                        <p class="text-gray-300 text-sm">Heavy-wall structural pipes and 3PE/FBE anti-corrosion solutions engineered to withstand harsh marine and desert environments.</p>
                     </div>
                 </div>
-                <!-- Application 3: Construction -->
+
+                <!-- Application 3: Civil Construction -->
                 <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
-                    <img src="images/applications/construction.jpg" alt="Construction Structural" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
-                    <!-- 简笔画/图标背景 -->
-                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300">
-                        <i class="fas fa-city text-9xl opacity-20"></i>
-                    </div>
+                    <img src="images/applications/construction.jpg" alt="Civil Construction and Infrastructure" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-building text-9xl opacity-20"></i></div>
                     <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
                         <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-city"></i></div>
-                        <h3 class="text-2xl font-bold text-white mb-2">Construction Structural</h3>
-                        <p class="text-gray-300 text-sm">Large diameter SSAW/LSAW piling pipes and profile steel for foundational support in bridges, airports, and stadiums.</p>
+                        <h3 class="text-2xl font-bold text-white mb-2">Civil Construction</h3>
+                        <p class="text-gray-300 text-sm">Profile steel, H-beams, and scaffolding pipes for foundational support in bridges, airports, and urban mega-structures.</p>
                     </div>
                 </div>
+
+                <!-- Application 4: Piling Construction -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/piling-construction.jpg" alt="Piling Construction" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-hammer text-9xl opacity-20"></i></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-hammer"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Piling Construction</h3>
+                        <p class="text-gray-300 text-sm">Large diameter SSAW/LSAW piling pipes with clutch locks for foundational support in ports, docks, and marine combi-walls.</p>
+                    </div>
+                </div>
+
+                <!-- Application 5: Mechanical Processing -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/mechanical-processing.jpg" alt="Mechanical Processing" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-cogs text-9xl opacity-20"></i></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-cogs"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Mechanical Processing</h3>
+                        <p class="text-gray-300 text-sm">Precision seamless tubes and durable structural steel utilized for manufacturing heavy machinery, automotive components, and equipment.</p>
+                    </div>
+                </div>
+
+                <!-- Application 6: Mining -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/mining.jpg" alt="Mining Industry" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-hard-hat text-9xl opacity-20"></i></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-hard-hat"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Mining Industry</h3>
+                        <p class="text-gray-300 text-sm">Highly durable, wear-resistant steel pipes and specialized fittings designed for slurry transport and harsh underground mining environments.</p>
+                    </div>
+                </div>
+                
+                <!-- Application 7: Fire Safety -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/fire-safety.jpg" alt="Fire Safety" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-fire-extinguisher text-9xl opacity-20"></i></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-fire-extinguisher"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Fire Safety</h3>
+                        <p class="text-gray-300 text-sm">Red-painted and galvanized grooved-end steel pipes specifically tested and certified for commercial fire sprinkler systems.</p>
+                    </div>
+                </div>
+
+                <!-- Application 8: Boiler Tubes & Power -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/boiler-power.jpg" alt="Boiler Tubes and Power Generation" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-bolt text-9xl opacity-20"></i></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-bolt"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Boiler & Power Generation</h3>
+                        <p class="text-gray-300 text-sm">High-temperature, high-pressure boiler tubes and alloy steel components critical for thermal and nuclear power plants.</p>
+                    </div>
+                </div>
+
+                <!-- Application 9: Water Transmission -->
+                <div class="group relative overflow-hidden rounded-2xl aspect-[4/3] bg-gray-100 border border-gray-200">
+                    <img src="images/applications/water-transmission.jpg" alt="Water Transmission" class="object-cover w-full h-full transform group-hover:scale-110 transition duration-700 hidden absolute inset-0 z-0" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                    <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-300"><i class="fas fa-tint text-9xl opacity-20"></i></div>
+                    <div class="absolute inset-0 bg-gradient-to-t from-gray-900 via-gray-900/80 to-transparent flex flex-col justify-end p-8 z-10 transition duration-300 group-hover:bg-gray-900/90">
+                        <div class="text-blue-400 text-3xl mb-3"><i class="fas fa-water"></i></div>
+                        <h3 class="text-2xl font-bold text-white mb-2">Water Transmission</h3>
+                        <p class="text-gray-300 text-sm">Large diameter SSAW pipes with internal epoxy coating for municipal water grids, sewage lines, and desalination plants.</p>
+                    </div>
+                </div>
+
             </div>
         </div>
     </section>
 
-    <!-- 深度 SEO 模块：质检与工艺 (QC & Processing) -->
-    <section id="qc-process" class="py-20 bg-gray-50 border-t border-gray-200">
+    <!-- 服务内容 (One-Stop Services) -->
+    <section id="services" class="py-20 bg-gray-900 text-white border-t border-gray-800">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-3xl md:text-4xl font-bold mb-4 text-gray-900">Strict Quality Control & Processing</h2>
-                <p class="text-gray-500 max-w-3xl mx-auto">Complying with ISO 9001, we provide 100% inspection and advanced anti-corrosion solutions.</p>
+                <span class="text-blue-400 font-bold tracking-wider uppercase text-sm">Beyond Manufacturing</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4">One-Stop Value-Added Services</h2>
+                <p class="text-gray-400 max-w-3xl mx-auto">As your dedicated Project Manager in China, Flora Hu provides end-to-end supply chain solutions to save your time, lower your risks, and guarantee successful project delivery.</p>
             </div>
-            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mr-4"><i class="fas fa-microscope"></i></div>
-                        <h3 class="text-2xl font-bold">100% Inspection Process</h3>
-                    </div>
-                    <ul class="space-y-4 text-gray-600">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><strong>Raw Material Check:</strong> Verification of chemical & mechanical properties.</div></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><strong>In-Process Control:</strong> NDT (Non-Destructive Testing) including UT.</div></li>
-                        <li class="flex items-start"><i class="fas fa-check-circle text-green-500 mt-1 mr-3"></i><div><strong>Pre-Shipment Inspection:</strong> Markings, packaging, and unblemished appearance.</div></li>
-                        <li class="flex items-start"><i class="fas fa-shield-alt text-blue-500 mt-1 mr-3"></i><div><strong>Third-Party Approval:</strong> TUV, SGS, Intertek, ABS, and LR.</div></li>
-                    </ul>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-blue-500 transition group">
+                    <div class="w-14 h-14 bg-blue-900/50 text-blue-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fas fa-shopping-cart"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Package Procurement</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Stop managing 10 different factories. We consolidate pipes, fittings, valves, and structural steel into one comprehensive shipment.</p>
                 </div>
-                <div class="bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
-                    <div class="flex items-center mb-6">
-                        <div class="w-12 h-12 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-2xl mr-4"><i class="fas fa-cogs"></i></div>
-                        <h3 class="text-2xl font-bold">Advanced Processing</h3>
-                    </div>
-                    <div class="mb-6">
-                        <h4 class="font-bold text-gray-900 mb-2 border-b pb-2">Anti-Corrosion Coatings</h4>
-                        <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                            <li><i class="fas fa-caret-right text-gray-400 mr-2"></i> 3PE/3LPE Coating</li>
-                            <li><i class="fas fa-caret-right text-gray-400 mr-2"></i> FBE & Epoxy Coating</li>
-                            <li><i class="fas fa-caret-right text-gray-400 mr-2"></i> Hot Dipped Galvanized</li>
-                        </ul>
-                    </div>
-                    <div>
-                        <h4 class="font-bold text-gray-900 mb-2 border-b pb-2">Machine Work</h4>
-                        <ul class="grid grid-cols-2 gap-2 text-sm text-gray-600">
-                            <li><i class="fas fa-caret-right text-gray-400 mr-2"></i> Threaded & Grooved</li>
-                            <li><i class="fas fa-caret-right text-gray-400 mr-2"></i> Beveled End & Flanges</li>
-                        </ul>
-                    </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-green-500 transition group">
+                    <div class="w-14 h-14 bg-green-900/50 text-green-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fas fa-file-invoice-dollar"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Financial Solutions</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">We support flexible payment terms including T/T, 100% L/C at sight, and offer financial risk assessments for large-scale EPC tenders.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-purple-500 transition group">
+                    <div class="w-14 h-14 bg-purple-900/50 text-purple-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fas fa-tasks"></i></div>
+                    <h3 class="text-xl font-bold mb-3">Project Management</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Enjoy 24/7 transparent updates. We provide weekly production photos, mill test tracking, and real-time shipping schedules.</p>
+                </div>
+                <div class="bg-gray-800 p-8 rounded-2xl border border-gray-700 hover:border-red-500 transition group">
+                    <div class="w-14 h-14 bg-red-900/50 text-red-400 rounded-xl flex items-center justify-center text-2xl mb-6 group-hover:scale-110 transition"><i class="fas fa-headset"></i></div>
+                    <h3 class="text-xl font-bold mb-3">After-Sales Guarantee</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">Our responsibility doesn't end at the port. We handle custom clearance documents promptly and offer a clear, transparent claim policy.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- 【大客户信任升级】 全球交付与档案 (Logistics & Documentation) -->
+    <!-- 深度 SEO 模块：质检、硬核定制加工与防腐图谱 -->
+    <section id="qc-customizing" class="py-20 bg-white border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-blue-600 font-bold tracking-wider uppercase text-sm">Manufacturing Excellence</span>
+                <h2 class="text-3xl md:text-4xl font-bold mt-2 mb-4 text-gray-900">Strict QC & Deep Fabrication</h2>
+                <p class="text-gray-500 max-w-3xl mx-auto">Equipped with a state-of-the-art CNC processing center and coating lines, we provide ready-to-install steel components to save your on-site fabrication costs.</p>
+            </div>
+            
+            <div class="bg-gray-50 p-8 rounded-2xl shadow-sm border border-gray-100 mb-16">
+                <div class="flex items-center justify-center mb-6">
+                    <div class="w-12 h-12 bg-blue-100 text-blue-600 rounded-lg flex items-center justify-center text-2xl mr-4"><i class="fas fa-microscope"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900">100% Inspection Guarantee</h3>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-sm text-gray-600">
+                    <div class="flex items-start bg-white p-4 rounded-xl border border-gray-100"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><div><strong>Raw Material Check:</strong> Chemical & mechanical properties.</div></div>
+                    <div class="flex items-start bg-white p-4 rounded-xl border border-gray-100"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><div><strong>In-Process Control:</strong> NDT / Ultrasonic Testing (UT).</div></div>
+                    <div class="flex items-start bg-white p-4 rounded-xl border border-gray-100"><i class="fas fa-check-circle text-green-500 mt-1 mr-3 text-lg"></i><div><strong>Pre-Shipment:</strong> Dimension, Markings & Packaging check.</div></div>
+                    <div class="flex items-start bg-white p-4 rounded-xl border border-gray-100"><i class="fas fa-shield-alt text-blue-500 mt-1 mr-3 text-lg"></i><div><strong>TPI Approved:</strong> TUV, SGS, Intertek, ABS, LR.</div></div>
+                </div>
+            </div>
+
+            <div class="mb-20">
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-10 bg-purple-100 text-purple-600 rounded-lg flex items-center justify-center text-xl mr-4"><i class="fas fa-cogs"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900">Pipe End Machining & Deep Fabrication</h3>
+                </div>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/threaded-end.jpg" alt="Threaded End" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-code-branch text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Threaded End</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/grooved-end.jpg" alt="Grooved End" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-grip-lines text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Grooved End</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/tapered-end.jpg" alt="Tapered End" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-compress-alt text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Tapered End</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/spot-holing.jpg" alt="Spot Holing Machining" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-circle-notch text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Spot Holing Machining</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/beveled-end.jpg" alt="Beveled End" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-cut text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Beveled End</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/flanges-welding.jpg" alt="Flanges Welding" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-life-ring text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Flanges Welding</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/cross-bar-welding.jpg" alt="Cross Bar Welding" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-plus text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Cross Bar Welding</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/clutch-lock.jpg" alt="Clutch Lock Welding" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-link text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Clutch Lock Welding</div>
+                    </div>
+                    <div class="bg-white rounded-xl border border-gray-100 overflow-hidden shadow-sm hover:shadow-md transition group">
+                        <div class="h-32 bg-gray-100 relative">
+                            <img src="images/machining/boiler-bending.jpg" alt="Boiler Bending" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-purple-50 transition"><i class="fas fa-level-down-alt text-4xl"></i></div>
+                        </div>
+                        <div class="p-4 text-center border-t border-gray-100 font-semibold text-gray-800">Boiler Bending</div>
+                    </div>
+                </div>
+            </div>
+
+            <div>
+                <div class="flex items-center mb-8">
+                    <div class="w-10 h-10 bg-orange-100 text-orange-600 rounded-lg flex items-center justify-center text-xl mr-4"><i class="fas fa-paint-roller"></i></div>
+                    <h3 class="text-2xl font-bold text-gray-900">Anti-Corrosion & Surface Coatings</h3>
+                </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-2 right-2 bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded z-20 shadow">Cost: High</div>
+                        <div class="h-40 bg-gray-100 relative">
+                            <img src="images/coatings/3pe-coating.jpg" alt="3PE / 3LPE Coating" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-orange-50 transition"><i class="fas fa-layer-group text-5xl"></i></div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-1">3PE / 3LPE Coating</h4>
+                            <p class="text-xs text-gray-500">Premium 3-layer polyethylene coating for ultimate underground pipeline protection.</p>
+                        </div>
+                    </div>
+                    
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-2 right-2 bg-orange-100 text-orange-700 text-xs font-bold px-2 py-1 rounded z-20 shadow">Cost: Med-High</div>
+                        <div class="h-40 bg-gray-100 relative">
+                            <img src="images/coatings/fbe-coating.jpg" alt="FBE Coating" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-orange-50 transition"><i class="fas fa-spray-can text-5xl"></i></div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-1">FBE Coating</h4>
+                            <p class="text-xs text-gray-500">Fusion Bonded Epoxy coating, excellent resistance to soil stress and chemicals.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-2 right-2 bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-1 rounded z-20 shadow">Cost: Medium</div>
+                        <div class="h-40 bg-gray-100 relative">
+                            <img src="images/coatings/epoxy-coating.jpg" alt="Epoxy Coating" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-orange-50 transition"><i class="fas fa-paint-brush text-5xl"></i></div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-1">Epoxy Coating</h4>
+                            <p class="text-xs text-gray-500">Internal/External liquid epoxy coating for water and industrial fluid transmission.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-2 right-2 bg-yellow-100 text-yellow-700 text-xs font-bold px-2 py-1 rounded z-20 shadow">Cost: Medium</div>
+                        <div class="h-40 bg-gray-100 relative">
+                            <img src="images/coatings/hdg-coating.jpg" alt="Hot Dipped Galvanized" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-orange-50 transition"><i class="fas fa-tint-slash text-5xl"></i></div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-1">Hot Dipped Galvanized</h4>
+                            <p class="text-xs text-gray-500">Thick zinc layer coating offering highly durable rust protection for exposed structures.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-2 right-2 bg-green-100 text-green-700 text-xs font-bold px-2 py-1 rounded z-20 shadow">Cost: Low</div>
+                        <div class="h-40 bg-gray-100 relative">
+                            <img src="images/coatings/anti-rust-black.jpg" alt="Anti-Rust Black Coating" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-orange-50 transition"><i class="fas fa-fill-drip text-5xl"></i></div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-1">Anti-Rust Black Coating</h4>
+                            <p class="text-xs text-gray-500">Standard economical surface painting to prevent rusting during long sea freight transit.</p>
+                        </div>
+                    </div>
+
+                    <div class="bg-white rounded-xl border border-gray-200 overflow-hidden shadow-sm relative group">
+                        <div class="absolute top-2 right-2 bg-red-100 text-red-700 text-xs font-bold px-2 py-1 rounded z-20 shadow">Cost: High</div>
+                        <div class="h-40 bg-gray-100 relative">
+                            <img src="images/coatings/thermal-insulation.jpg" alt="Thermal Insulation Coating" class="w-full h-full object-cover hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
+                            <div class="absolute inset-0 flex items-center justify-center z-0 text-gray-400 group-hover:bg-orange-50 transition"><i class="fas fa-thermometer-half text-5xl"></i></div>
+                        </div>
+                        <div class="p-5 border-t border-gray-100">
+                            <h4 class="font-bold text-gray-900 mb-1">Thermal Insulation Coating</h4>
+                            <p class="text-xs text-gray-500">Polyurethane foam (PU) and protective jacket for hot water and steam networks.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </section>
+
+    <!-- 全球交付与档案 (Logistics & Documentation) -->
     <section id="logistics" class="py-20 bg-gray-900 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
@@ -482,12 +840,9 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
-                <!-- 散杂货船装运能力 -->
                 <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 relative">
                     <div class="h-64 bg-gray-850 flex items-center justify-center relative">
-                         <!-- 尝试加载真实图片 -->
                         <img src="images/logistics/breakbulk.jpg" alt="Breakbulk Vessel Shipping" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
-                        <!-- 矢量占位图标 -->
                         <i class="fas fa-ship text-7xl text-gray-600 z-0"></i>
                         <div class="absolute bottom-4 left-4 bg-blue-600 px-3 py-1 text-xs font-bold rounded z-20">Logistics</div>
                     </div>
@@ -499,12 +854,9 @@
                     </div>
                 </div>
 
-                <!-- 材质单与质量追溯 -->
                 <div class="bg-gray-800 rounded-2xl overflow-hidden shadow-2xl border border-gray-700 relative">
                     <div class="h-64 bg-gray-850 flex items-center justify-center relative">
-                        <!-- 尝试加载真实图片 -->
                         <img src="images/logistics/mtc-sample.jpg" alt="Mill Test Certificate MTC EN10204" class="w-full h-full object-cover opacity-80 hover:opacity-100 transition hidden absolute inset-0 z-10" onload="this.classList.remove('hidden');" onerror="this.classList.add('hidden');">
-                        <!-- 矢量占位图标 -->
                         <i class="fas fa-file-contract text-7xl text-gray-600 z-0"></i>
                         <div class="absolute bottom-4 left-4 bg-purple-600 px-3 py-1 text-xs font-bold rounded z-20">Documentation</div>
                     </div>
@@ -519,7 +871,7 @@
         </div>
     </section>
 
-    <!-- AI搜索高优抓取区：17大高频终极问答 (FAQ Section) -->
+    <!-- FAQ Section -->
     <section id="faq" class="py-20 bg-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-12">
@@ -529,37 +881,26 @@
             </div>
             
             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <!-- FAQ 1: Factory vs Trading (硬核问题) -->
                 <div class="bg-blue-50 rounded-xl p-6 border border-blue-100 shadow-sm">
                     <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-industry text-blue-600 mr-2"></i> Are you a real manufacturer or just a trading company?</h3>
                     <p class="text-gray-700 text-sm leading-relaxed">We are a leading manufacturer with our own extensive production facilities for ERW, LSAW, and SSAW pipes in China. We warmly welcome video calls for virtual factory tours or physical site visits by your EPC team.</p>
                 </div>
-
-                <!-- FAQ 2: Claims (硬核问题) -->
                 <div class="bg-blue-50 rounded-xl p-6 border border-blue-100 shadow-sm">
                     <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-shield-alt text-blue-600 mr-2"></i> What is your claim policy if products arrive damaged?</h3>
                     <p class="text-gray-700 text-sm leading-relaxed">We take full responsibility for our quality. If damage occurs due to our packing or manufacturing, we require photos and a TPI report at the destination port. We will compensate or replace the defective goods without evasion.</p>
                 </div>
-
-                <!-- FAQ 3: Track Record (硬核问题) -->
                 <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition">
                     <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-globe text-blue-500 mr-2"></i> Have you exported to our region before?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">We have a strong track record supplying top EPC contractors globally, including the Middle East (Saudi Arabia, UAE), South America, and Southeast Asia. We can share specific reference lists upon request.</p>
                 </div>
-
-                <!-- FAQ 4: MTC (硬核问题) -->
                 <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition">
                     <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-file-contract text-blue-500 mr-2"></i> Can you provide MTC EN10204 3.1 or 3.2?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Yes, we provide full traceability. Every shipment comes with an MTC strictly complying with EN10204 3.1. We can also provide EN10204 3.2 certified by third parties like TUV or ABS upon request.</p>
                 </div>
-
-                <!-- FAQ 5: Breakbulk (硬核问题) -->
                 <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition">
                     <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-ship text-blue-500 mr-2"></i> Do you have Breakbulk Vessel shipping experience?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Absolutely. For large-diameter pipes that exceed standard container dimensions, our dedicated logistics team is highly experienced in Breakbulk (BBK) and Out of Gauge (OOG) shipments.</p>
                 </div>
-
-                <!-- 以下为原有的经典业务问题 -->
                 <div class="bg-gray-50 rounded-xl p-6 border border-gray-100 hover:shadow-md transition">
                     <h3 class="text-lg font-bold text-gray-900 mb-2"><i class="fas fa-question-circle text-blue-500 mr-2"></i> What is your Minimum Order Quantity (MOQ)?</h3>
                     <p class="text-gray-600 text-sm leading-relaxed">Our MOQ typically starts from <strong>10 to 25 metric tons</strong> depending on the specific pipe dimensions. However, for project trials or stock items, we can accommodate smaller quantities.</p>
@@ -638,13 +979,21 @@
         </div>
     </footer>
 
-    <!-- 手机端菜单脚本 -->
     <script>
         const btn = document.getElementById('mobile-menu-btn');
         const menu = document.getElementById('mobile-menu');
         btn.addEventListener('click', () => {
             menu.classList.toggle('hidden');
         });
+
+        function slideLeft() {
+            const slider = document.getElementById('product-slider');
+            slider.scrollBy({ left: -400, behavior: 'smooth' });
+        }
+        function slideRight() {
+            const slider = document.getElementById('product-slider');
+            slider.scrollBy({ left: 400, behavior: 'smooth' });
+        }
     </script>
 </body>
 </html>
